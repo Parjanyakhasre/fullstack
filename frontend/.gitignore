@@ -38,3 +38,4 @@ dist-ssr/
 .vite/
 
 package.json
+package-lock.json
