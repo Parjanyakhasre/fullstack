@@ -2,9 +2,12 @@
 const express = require("express")
 const noteModel = require("./models/note.model")
 const cors = require("cors")
+const path = require("path")
 
 
 const app = express()
+
+app.use(express.static(path.join(__dirname,"..","/public")))
 
 // cors middleware
 app.use(cors())
@@ -50,13 +53,22 @@ app.delete("/api/notes/:id", async (req, res) => {
 // update note in db with the help of id from req.params and data from req.body
 app.patch("/api/notes/:id", async (req, res) => {
     const id = req.params.id
-    const { description } = req.body
+        const { title, description } = req.body
 
-    await noteModel.findByIdAndUpdate(id, {description})
+    const updatedNote = await noteModel.findByIdAndUpdate(
+        id, 
+        { title, description }, 
+        { new: true }
+    )
 
     res.status(200).json({
         message: "note updated successfully",
+        note: updatedNote
     })
+})
+
+app.use('*name', (req, res) => {
+    res.sendFile(path.join(__dirname,"..","/public/index.html"))
 })
 
 module.exports = app

@@ -33,3 +33,74 @@ html{
 .note p {
   font-size: 1rem;
 }
+.note-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.note-create-form input,
+.note-create-form textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.note-create-form button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #424242;
+  color: #fff;
+  cursor: pointer;
+}
+.deletebtn {
+  
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #db3e3b;
+  color: #fff;
+  cursor: pointer;
+}
+.updatebtn {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #393838;
+  color: #fff;
+  cursor: pointer;
+}
+.textinput {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.textarea {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 0.5rem 0;
+}
+.btnsave {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  gap: 0.5rem;
+  margin-right: 0.9rem;
+}
+.btncancel {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #393838;
+  color: #fff;
+  cursor: pointer;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+
+}
